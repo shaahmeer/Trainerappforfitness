@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".AssignTrainingActivity">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewDates"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/editTextTrainingSession"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Training Session"
+            app:layout_constraintTop_toBottomOf="@id/recyclerViewDates"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp" />
+
+        <Spinner
+            android:id="@+id/spinnerTrainingType"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/editTextTrainingSession"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp" />
+
+        <EditText
+            android:id="@+id/editTextTrainingDuration"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Training Duration (minutes)"
+            android:inputType="number"
+            app:layout_constraintTop_toBottomOf="@id/spinnerTrainingType"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp" />
+
+        <EditText
+            android:id="@+id/editTextMealPlan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Meal Plan"
+            app:layout_constraintTop_toBottomOf="@id/editTextTrainingDuration"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp" />
+
+        <EditText
+            android:id="@+id/editTextTrainingIntensity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Training Intensity"
+            app:layout_constraintTop_toBottomOf="@id/editTextMealPlan"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp" />
+
+        <EditText
+            android:id="@+id/editTextTrainingFocus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Training Focus"
+            app:layout_constraintTop_toBottomOf="@id/editTextTrainingIntensity"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp" />
+
+        <EditText
+            android:id="@+id/editTextEquipmentNeeded"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Equipment Needed"
+            app:layout_constraintTop_toBottomOf="@id/editTextTrainingFocus"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp" />
+
+        <EditText
+            android:id="@+id/editTextAdditionalNotes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Additional Notes"
+            app:layout_constraintTop_toBottomOf="@id/editTextEquipmentNeeded"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp" />
+
+        <Spinner
+            android:id="@+id/spinnerTrainingLocation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/editTextAdditionalNotes"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp" />
+
+        <Spinner
+            android:id="@+id/spinnerTrainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/spinnerTrainingLocation"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp" />
+
+        <Button
+            android:id="@+id/buttonSaveSession"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save Session"
+            app:layout_constraintTop_toBottomOf="@id/spinnerTrainer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp" />
+
+        <Button
+            android:id="@+id/buttonUploadVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upload Video (Optional)"
+            app:layout_constraintTop_toBottomOf="@id/buttonSaveSession"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
